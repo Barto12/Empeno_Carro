@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Bienvenido a Car Pawn</h1>
+    <p class="lead">Empeña tu coche de manera rápida y sencilla.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('add_car') }}" role="button">Empeñar tu coche</a>
+</div>
+{% endblock %}

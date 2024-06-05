@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Empeñar Tu Coche</h2>
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="plates">Placas</label>
+        <input type="text" class="form-control" id="plates" name="plates" required>
+    </div>
+    <div class="form-group">
+        <label for="model">Modelo</label>
+        <input type="text" class="form-control" id="model" name="model" required>
+    </div>
+    <div class="form-group">
+        <label for="year">Año</label>
+        <input type="number" class="form-control" id="year" name="year" required>
+    </div>
+    <div class="form-group">
+        <label for="mileage">Kilometraje</label>
+        <input type="number" class="form-control" id="mileage" name="mileage" required>
+    </div>
+    <div class="form-group">
+        <label for="brand">Marca</label>
+        <input type="text" class="form-control" id="brand" name="brand" required>
+    </div>
+    <div class="form-group">
+        <label for="image">Imagen</label>
+        <input type="file" class="form-control-file" id="image" name="image" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+{% endblock %}

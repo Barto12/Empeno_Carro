@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Contrato de Empeño</h2>
+<pre>{{ contract_text }}</pre>
+<a class="btn btn-primary" href="{{ url_for('index') }}">Volver a Inicio</a>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Panel de Administración</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Placas</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Kilometraje</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Monto del Préstamo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for car in cars %}
+        <tr>
+            <th scope="row">{{ car.id }}</th>
+            <td>{{ car.plates }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.year }}</td>
+            <td>{{ car.mileage }}</td>
+            <td>{{ car.brand }}</td>
+            <td><img src="{{ url_for('static', filename='images/' + car.image) }}" alt="Car Image" width="100"></td>
+            <td>${{ car.loan_amount }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
